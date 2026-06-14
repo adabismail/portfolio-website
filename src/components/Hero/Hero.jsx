@@ -108,7 +108,7 @@ const Hero = () => {
                 <FaLinkedin />
                 <span>LinkedIn</span>
               </a>
-              <a
+              {/* <a
                 href={`mailto:${personalInfo.email}`}
                 className="hero-social-link"
                 aria-label="Email"
@@ -116,7 +116,7 @@ const Hero = () => {
               >
                 <FaEnvelope />
                 <span>Gmail</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
