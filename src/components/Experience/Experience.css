@@ -157,12 +157,16 @@
    ============================================================ */
 @media (max-width: 640px) {
   .exp-item {
-    grid-template-columns: 0 1fr;
-    gap: 0 0;
+    display: block;
   }
 
   .exp-spine {
     display: none;
+  }
+
+  .exp-card {
+    padding: 20px;
+    margin-bottom: 20px;
   }
 
   .exp-card-header {
@@ -172,9 +176,5 @@
 
   .exp-duration {
     margin-left: 0;
-  }
-
-  .exp-card {
-    padding: 20px;
   }
 }

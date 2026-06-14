@@ -26,33 +26,36 @@ const Hero = () => {
       </div>
 
       <div className="hero-inner">
+        {/* Text: eyebrow + heading + typing + summary */}
         <div className="hero-content">
-
-          {/* Eyebrow */}
           <div className="hero-eyebrow">
             <span className="hero-eyebrow-dot" />
             <span>Available for opportunities</span>
           </div>
 
-          {/* Main heading */}
           <h1 className="hero-title">
             Hello, I am{' '}
             <span className="gradient-text">Adab Ismail</span>
           </h1>
 
-          {/* Typing effect */}
           <div className="hero-typing-row">
             <span className="hero-typing-prefix">I am </span>
             <span className="hero-typing-word">{typedRole}</span>
             <span className="hero-cursor" aria-hidden="true">|</span>
           </div>
 
-          {/* Summary */}
           <p className="hero-summary">
             {personalInfo.heroSummary}
           </p>
+        </div>
 
-          {/* CTA buttons */}
+        {/* Radar — right column on desktop, between text and CTAs on mobile */}
+        <div className="hero-visual">
+          <EngineeringRadar />
+        </div>
+
+        {/* Actions: CTA buttons + social links */}
+        <div className="hero-actions">
           <div className="hero-ctas">
             <a
               href={personalInfo.resume}
@@ -80,7 +83,6 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Connect row */}
           <div className="hero-connect">
             <span className="hero-connect-label">Connect with me</span>
             <div className="hero-social-links">
@@ -117,54 +119,6 @@ const Hero = () => {
               </a>
             </div>
           </div>
-        </div>
-
-        {/* Hero visual */}
-        {/* <div className="hero-visual">
-          <div className="hero-card">
-            <div className="hero-card-avatar">
-              <img
-                src="/profile.jpg"
-                alt="Adab Ismail"
-                className="hero-card-img"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextSibling.style.display = 'flex';
-                }}
-              />
-              <span className="hero-card-initials" style={{ display: 'none' }}>AI</span>
-            </div>
-            <div className="hero-card-info">
-              <h3 className="hero-card-name">Adab Ismail</h3>
-              <p className="hero-card-role">Software Engineer</p>
-              <p className="hero-card-location">📍 NIT Srinagar, India</p>
-            </div>
-            <div className="hero-card-stats">
-              <div className="hero-stat">
-                <span className="hero-stat-num">4+</span>
-                <span className="hero-stat-label">Projects</span>
-              </div>
-              <div className="hero-stat-divider" />
-              <div className="hero-stat">
-                <span className="hero-stat-num">3+</span>
-                <span className="hero-stat-label">Internships</span>
-              </div>
-              <div className="hero-stat-divider" />
-              <div className="hero-stat">
-                <span className="hero-stat-num">2+</span>
-                <span className="hero-stat-label">Years Coding</span>
-              </div>
-            </div>
-            <div className="hero-card-tags">
-              {['Agentic AI', 'RAG', 'Full Stack'].map((t) => (
-                <span key={t} className="tag">{t}</span>
-              ))}
-            </div>
-          </div>
-        </div> */}
-
-        <div className="hero-visual">
-          <EngineeringRadar />
         </div>
       </div>
 

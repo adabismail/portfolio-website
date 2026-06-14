@@ -60,17 +60,31 @@
   padding: 0 32px;
   display: grid;
   grid-template-columns: 1fr 380px;
-  gap: 64px;
-  align-items: center;
+  grid-template-areas:
+    "content visual"
+    "actions visual";
+  column-gap: 64px;
+  row-gap: 36px;
+  align-items: start;
   width: 100%;
 }
 
-/* Content */
+/* Content (text above radar on mobile) */
 .hero-content {
+  grid-area: content;
   display: flex;
   flex-direction: column;
   gap: 0;
   animation: heroFadeIn 0.9s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Actions (CTAs + social — below radar on mobile) */
+.hero-actions {
+  grid-area: actions;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: heroFadeIn 0.9s 0.15s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
 @keyframes heroFadeIn {
@@ -223,6 +237,8 @@
    HERO VISUAL / CARD
    ============================================================ */
 .hero-visual {
+  grid-area: visual;
+  align-self: center;
   animation: heroFadeIn 0.9s 0.2s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
@@ -394,7 +410,11 @@
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    grid-template-areas:
+      "content"
+      "visual"
+      "actions";
+    row-gap: 36px;
     text-align: center;
   }
 
@@ -410,18 +430,16 @@
   }
 
   .hero-visual {
-    order: -1;
-  }
-
-  .hero-card {
-    max-width: 340px;
+    max-width: 400px;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .hero-inner {
     padding: 0 20px;
+    row-gap: 28px;
   }
 
   .hero-typing-row {
@@ -430,10 +448,5 @@
 
   .hero-social-link span {
     display: none;
-  }
-
-  .hero-card-stats {
-    gap: 12px;
-    padding: 12px 14px;
   }
 }

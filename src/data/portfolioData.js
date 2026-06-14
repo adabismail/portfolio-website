@@ -17,10 +17,10 @@ export const personalInfo = {
 };
 
 export const roles = [
-  'Software Engineer',
-  'Agentic AI Developer',
-  'Full Stack Developer',
-  'Research Enthusiast',
+  'a Software Engineer',
+  'an Agentic AI Developer',
+  'a Full Stack Developer',
+  'a Research Enthusiast',
 ];
 
 export const experiences = [
