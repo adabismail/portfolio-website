@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaPaperPlane, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPaperPlane } from 'react-icons/fa';
 import { personalInfo } from '../../data/portfolioData';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Contact.css';
@@ -11,7 +11,6 @@ const Contact = () => {
   const [status, setStatus] = useState('idle'); // idle | sending | sent | error
   const [headerRef, headerVisible] = useScrollReveal();
   const [formRef, formVisible] = useScrollReveal();
-  const [infoRef, infoVisible] = useScrollReveal();
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -132,55 +131,6 @@ const Contact = () => {
                 </p>
               )}
             </form>
-          </div>
-
-          {/* Info */}
-          <div ref={infoRef} className={`contact-info-col reveal${infoVisible ? ' visible' : ''}`}>
-            <div className="contact-info-card card">
-              <h3 className="contact-info-heading">Get in touch</h3>
-              <p className="contact-info-text">
-                I'm currently open to internships, full-time roles, research collaborations, and freelance projects in software engineering and AI development.
-              </p>
-
-              <div className="contact-details">
-                <a href={`mailto:${personalInfo.email}`} className="contact-detail-link">
-                  <span className="contact-detail-icon"><FaEnvelope /></span>
-                  <div>
-                    <span className="contact-detail-label">Email</span>
-                    <span className="contact-detail-val">{personalInfo.email}</span>
-                  </div>
-                </a>
-
-                <div className="contact-detail-link" style={{ cursor: 'default' }}>
-                  <span className="contact-detail-icon"><FaMapMarkerAlt /></span>
-                  <div>
-                    <span className="contact-detail-label">Location</span>
-                    <span className="contact-detail-val">NIT Srinagar, India</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="contact-socials">
-                <a
-                  href={personalInfo.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-social-btn"
-                >
-                  <FaGithub />
-                  <span>GitHub</span>
-                </a>
-                <a
-                  href={personalInfo.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-social-btn"
-                >
-                  <FaLinkedin />
-                  <span>LinkedIn</span>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>

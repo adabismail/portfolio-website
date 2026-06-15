@@ -15,9 +15,9 @@
 
 /* Top */
 .footer-top {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 40px;
   margin-bottom: 44px;
 }
@@ -150,15 +150,18 @@
    ============================================================ */
 @media (max-width: 780px) {
   .footer-top {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
   }
 
   .footer-socials {
-    justify-content: flex-start;
-  }
-
-  .footer-nav {
     justify-content: flex-start;
   }
 }

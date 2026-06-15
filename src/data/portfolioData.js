@@ -74,11 +74,11 @@ export const experiences = [
 export const projects = [
   {
     id: 1,
-    name: 'Personal Memory OS',
-    tagline: 'AI-powered memory and knowledge management system',
+    name: 'Airline Fuel Optimization Agent',
+    tagline: 'AI-driven flight optimization',
     description:
-      'A personal memory operating system that captures, organizes, and retrieves information intelligently using RAG pipelines, vector embeddings, and an LLM layer for semantic querying.',
-    tech: ['React', 'FastAPI', 'LangChain', 'Pinecone', 'OpenAI', 'PostgreSQL'],
+      'An AI-powered airline fuel optimization agent built with AWS Strands SDK and MCP that analyzes flight plans and live weather conditions to recommend fuel-efficient route and altitude adjustments. The system combines weather-aware reasoning, fuel consumption modeling, and agent-driven tool orchestration to generate actionable optimization recommendations and structured flight reports.',
+    tech: ['Python', 'AWS Strands SDK', 'MCP', 'Ollama', 'Llama 3.1', 'Docker'],
     github: 'https://github.com/adabismail',
     demo: null,
     color: '#6366f1',
@@ -88,20 +88,49 @@ export const projects = [
   },
   {
     id: 2,
-    name: 'CRM Lite',
-    tagline: 'Lightweight CRM built for small teams',
+    name: 'ReviewFlow-AI',
+    tagline: 'AI-Powered Review Automation',
     description:
-      'A clean, minimal CRM system for small businesses to manage contacts, track deals, log interactions, and get pipeline visibility — all without the complexity of enterprise tools.',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Tailwind CSS'],
-    github: 'https://github.com/adabismail',
+      'AI Review Agent is a LangGraph-powered AI workflow that processes customer reviews, performs sentiment analysis, generates personalized responses, extracts key complaints from negative feedback, and automatically sends alert emails to businesses. The system uses conditional graph routing to dynamically choose execution paths based on sentiment, maintains audit logs for traceability, and leverages HuggingFace language models for cost-effective inference.',
+    tech: ['Python', 'LangGraph', 'LangChain', 'LCEL', 'SMPT', 'HuggingFace'],
+    github: 'https://github.com/adabismail/ReviewFlow-AI',
     demo: null,
     color: '#06b6d4',
     gradient: 'linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%)',
     // Replace with: image: '/media/projects/crm-lite.jpg'
     image: null,
   },
-  {
+
+    {
     id: 3,
+    name: 'LRU-cache',
+    tagline: 'O(1) cache. HashMap + Doubly Linked List.',
+    description: 'Implementation of a Least Recently Used (LRU) Cache in Python achieving O(1) time complexity for both get() and put() operations. Uses a HashMap for fast lookup and a Doubly Linked List to maintain usage order. Includes eviction logic, thread-safe extension, 15 unit tests, and a step-by-step visual demo tracing every cache operation.',
+    tech: ['Python', 'HashMap', 'pytest', 'LRU Eviction', 'Thread safety'],
+    github: 'https://github.com/adabismail/lru_cache',
+    demo: null,
+    color: '#ec4899',
+    gradient: 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
+    image: '/media/projects/project5.jpg',
+  },
+
+  {
+    id: 4,
+    name: 'RISC-V Assembly Simulator',
+    tagline: 'Visual RISC-V Simulation and Debugging',
+    description: 'A lightweight RISC-V (RV32I) simulator built in Python with an integrated Tkinter GUI for writing, executing, and debugging assembly programs. The simulator supports core arithmetic, memory, and control-flow instructions, while providing instruction tracing, register visualization, memory state monitoring, and label-based branching to help users understand CPU execution and computer architecture concepts.',
+    tech: [ 'Assembly', 'Python', 'RV32I', 'Tkinter'],
+    github: 'https://github.com/adabismail/rv32i-simulator',
+    demo: null,
+    color: '#10b981',
+    gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+    // Replace with: image: '/media/projects/job-tracker.jpg'
+    image: null,
+  },
+  // ── Add more projects below this line ──────────────────────────
+
+    {
+    id: 5,
     name: 'FlightPulse',
     tagline: 'Real-time flight tracking and analytics',
     description:
@@ -114,33 +143,21 @@ export const projects = [
     // Replace with: image: '/media/projects/flightpulse.jpg'
     image: null,
   },
-  {
+
+    {
     id: 4,
-    name: 'Job Tracker + Resume Analyzer',
-    tagline: 'AI-assisted job search management',
-    description:
-      'An intelligent job application tracker that analyzes resumes against job descriptions using NLP, scores match quality, highlights skill gaps, and helps optimize applications.',
-    tech: ['React', 'FastAPI', 'OpenAI', 'spaCy', 'SQLite', 'Python'],
-    github: 'https://github.com/adabismail',
+    name: 'Hydra - MapReduce',
+    tagline: 'Fault-Tolerant Distributed Processing Engine',
+    description: 'A distributed MapReduce framework built in Python that processes large text datasets using a Master-Worker architecture. The system supports parallel task execution, heartbeat-based worker monitoring, automatic task reassignment on failures, file-based shuffle and reduce operations, and a React dashboard for real-time cluster monitoring and job tracking.',
+    tech: ['Python', 'FastAPI', 'Uvicorn', 'Pydantic', 'React', 'Threading'],
+    github: 'https://github.com/adabismail/hydra',
     demo: null,
     color: '#10b981',
     gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
     // Replace with: image: '/media/projects/job-tracker.jpg'
     image: null,
   },
-  // ── Add more projects below this line ──────────────────────────
-  {
-    id: 5,
-    name: 'Project Name',
-    tagline: 'Short tagline here',
-    description: 'Description of the project.',
-    tech: ['Tech1', 'Tech2'],
-    github: 'https://github.com/adabismail',
-    demo: null,
-    color: '#ec4899',
-    gradient: 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
-    image: '/media/projects/project5.jpg',
-  },
+
 ];
 
 export const skills = {

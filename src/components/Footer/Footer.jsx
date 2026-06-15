@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { personalInfo } from '../../data/portfolioData';
 import './Footer.css';
 
@@ -23,27 +23,6 @@ const Footer = () => {
               Software Engineer · Agentic AI Developer · NIT Srinagar
             </p>
           </div>
-
-          {/* Nav */}
-          <nav className="footer-nav">
-            {['About', 'Experience', 'Projects', 'Skills', 'Education', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="footer-nav-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const el = document.querySelector(`#${item.toLowerCase()}`);
-                  if (el) {
-                    const top = el.getBoundingClientRect().top + window.scrollY - 80;
-                    window.scrollTo({ top, behavior: 'smooth' });
-                  }
-                }}
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
 
           {/* Social */}
           <div className="footer-socials">
