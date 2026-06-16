@@ -31,14 +31,18 @@ const Header = ({ activeSection }) => {
     return () => document.removeEventListener('keydown', handler);
   }, [menuOpen]);
 
-  const handleNavClick = (e, href) => {
-    e.preventDefault();
-    setMenuOpen(false);
+  const scrollTo = (href) => {
     const target = document.querySelector(href);
     if (target) {
       const top = target.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top, behavior: 'smooth' });
     }
+  };
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    scrollTo(href);
   };
 
   const isActive = (href) => activeSection === href.replace('#', '');
@@ -72,6 +76,7 @@ const Header = ({ activeSection }) => {
                 href={link.href}
                 className={`nav-link${isActive(link.href) ? ' nav-link--active' : ''}`}
                 onClick={(e) => handleNavClick(e, link.href)}
+                onMouseEnter={() => scrollTo(link.href)}
               >
                 {link.label}
               </a>

@@ -12,19 +12,22 @@ import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('hero');
+  const [showTop, setShowTop] = useState(false);
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section[id]');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
-        });
-      },
-      { threshold: 0.3, rootMargin: '-80px 0px -30% 0px' }
-    );
-    sections.forEach((s) => observer.observe(s));
-    return () => sections.forEach((s) => observer.unobserve(s));
+    const handleScroll = () => {
+      const sections = [...document.querySelectorAll('section[id]')];
+      const scrollY = window.scrollY + 100;
+      let current = 'hero';
+      for (const s of sections) {
+        if (s.offsetTop <= scrollY) current = s.id;
+      }
+      setActiveSection(current);
+      setShowTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -46,6 +49,16 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
+
+      {/* Go to Top */}
+      <button
+        className={`go-top-btn${showTop ? ' go-top-btn--visible' : ''}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="Go to top"
+        title="Back to top"
+      >
+        ↑
+      </button>
     </ThemeProvider>
   );
 };

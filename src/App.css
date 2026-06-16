@@ -166,6 +166,49 @@ body {
 .section-divider { width: 100%; height: 1px; background: var(--border); }
 
 /* ============================================================
+   GO TO TOP BUTTON
+   ============================================================ */
+.go-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.45);
+  opacity: 0;
+  transform: translateY(16px) scale(0.85);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 90;
+}
+
+.go-top-btn--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.go-top-btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.6);
+}
+
+@media (max-width: 480px) {
+  .go-top-btn { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+}
+
+/* ============================================================
    BUTTONS
    ============================================================ */
 .btn {

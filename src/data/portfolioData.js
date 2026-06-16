@@ -79,7 +79,7 @@ export const projects = [
     description:
       'An AI-powered airline fuel optimization agent built with AWS Strands SDK and MCP that analyzes flight plans and live weather conditions to recommend fuel-efficient route and altitude adjustments. The system combines weather-aware reasoning, fuel consumption modeling, and agent-driven tool orchestration to generate actionable optimization recommendations and structured flight reports.',
     tech: ['Python', 'AWS Strands SDK', 'MCP', 'Ollama', 'Llama 3.1', 'Docker'],
-    github: 'https://github.com/adabismail',
+    github: 'https://github.com/adabismail/Airline_optimization_Agent',
     demo: null,
     color: '#6366f1',
     gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
