@@ -72,6 +72,15 @@
   font-weight: 800;
   flex-shrink: 0;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow: hidden;
+}
+
+.exp-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
 }
 
 .exp-meta {

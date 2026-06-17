@@ -22,7 +22,20 @@ const ExperienceCard = ({ exp, index }) => {
         {/* Header */}
         <div className="exp-card-header">
           <div className="exp-icon" style={{ background: `${exp.color}18`, border: `1px solid ${exp.color}30`, color: exp.color }}>
-            {exp.shortCompany.charAt(0)}
+            {exp.iconImg ? (
+              <img
+                src={exp.iconImg}
+                alt={exp.shortCompany}
+                className="exp-icon-img"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextSibling.style.display = 'flex';
+                }}
+              />
+            ) : null}
+            <span style={{ display: exp.iconImg ? 'none' : undefined }}>
+              {exp.shortCompany.charAt(0)}
+            </span>
           </div>
           <div className="exp-meta">
             <span className="exp-type" style={{ color: exp.color }}>

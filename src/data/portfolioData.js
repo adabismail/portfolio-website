@@ -38,6 +38,8 @@ export const experiences = [
       'Contributed to deep learning and computer vision research by developing, evaluating, and deploying machine learning models to support ongoing research initiatives.',
     ],
     tags: ['Python', 'Django', 'ReactJS', 'PosgreSQL', 'REST API Development', 'System Design', 'PyTorch', 'LLMs', 'Computer Vision'],
+    // Drop your logo at public/media/experience/gaash.png and set the path:
+    iconImg: '/media/experience/gaash.jpg',
   },
   {
     id: 2,
@@ -53,12 +55,14 @@ export const experiences = [
       'Outperformed the YOLOv5 baseline by +5.8% mAP and +4.2% F1-score through architecture optimization, training, and evaluation experiments.',
     ],
     tags: ['Deep Learning', 'Computer Vision', 'PyTorch', 'ViT', 'CNNs'],
+    // Drop your logo at  and set the path:
+    iconImg: '/media/experience/iit.jpg',
   },
   {
     id: 3,
     title: 'Frontend Development Intern',
     company: 'Traxevo Web Limited',
-    shortCompany: 'Internship',
+    shortCompany: 'Traxevo',
     duration: '2023 — Present',
     type: 'Internship',
     color: '#10b981',
@@ -68,6 +72,8 @@ export const experiences = [
       'Collaborated in Agile development cycles while ensuring responsive design, cross-browser compatibility, and a consistent user experience.',
     ],
     tags: ['React.js', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Performance Optimization'],
+    // Drop your logo at  and set the path:
+    iconImg: 'media/experience/traxevo.jpg',
   },
 ];
 
@@ -209,8 +215,8 @@ export const education = [
     description:
       'Studying core computer science fundamentals, data structures, algorithms, and advanced topics in AI/ML. Actively involved in research projects, coding clubs, and technical communities.',
     color: '#10b981',
-    // Replace with: iconImg: '/media/education/nit-srinagar.png'
-    iconImg: null,
+    // Replace with: iconImg: 
+    iconImg: '/media/education/nit.jpg',
   },
   {
     id: 2,
