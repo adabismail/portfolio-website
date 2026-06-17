@@ -31,7 +31,7 @@ export const experiences = [
     shortCompany: 'NIT Srinagar',
     duration: 'Feb 2026 — Present',
     type: 'Internship',
-    color: '#6366f1',
+    color: '#10b981',
     description: [
       'Built and maintained scalable Django + PostgreSQL applications, including an ERP system serving 500+ scholars and institutional staff.',
       'Developed a Django REST Framework admission platform that streamlined application processing for 4,000+ applicants through automated workflows and RESTful APIs',
@@ -46,7 +46,7 @@ export const experiences = [
     shortCompany: 'IIT Roorkee',
     duration: 'Jan 2025 — Mar 2026',
     type: 'Internship',
-    color: '#06b6d4',
+    color: '#10b981',
     description: [
       'Designed and implemented a hybrid object detection model integrating ResNet-50 feature extraction with Vision Transformer (ViT) attention mechanisms.',
       'Improved detection performance to 0.813 mAP@0.5 and 88.4% precision, achieving stronger feature representation and classification accuracy.',
@@ -81,8 +81,8 @@ export const projects = [
     tech: ['Python', 'AWS Strands SDK', 'MCP', 'Ollama', 'Llama 3.1', 'Docker'],
     github: 'https://github.com/adabismail/Airline_optimization_Agent',
     demo: null,
-    color: '#6366f1',
-    gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+    color: '#3b82f6',
+    gradient: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)',
     // Replace with: image: '/media/projects/memory-os.jpg'
     image: null,
   },
@@ -110,7 +110,7 @@ export const projects = [
     github: 'https://github.com/adabismail/lru_cache',
     demo: null,
     color: '#ec4899',
-    gradient: 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
+    gradient: 'linear-gradient(135deg, #ec4899 0%, #f97316 100%)',
     image: '/media/projects/project5.jpg',
   },
 
@@ -162,7 +162,7 @@ export const projects = [
 
 export const skills = {
   Frontend: {
-    color: '#6366f1',
+    color: '#3b82f6',
     // Replace with: iconImg: '/media/skills/frontend.svg'
     iconImg: null,
     items: ['React', 'Next.js', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vite'],
@@ -183,7 +183,7 @@ export const skills = {
     items: ['PyTorch', 'TensorFlow', 'Keras', 'Hugging Face', 'Transformers', 'CNNs'],
   },
   'Agentic AI': {
-    color: '#8b5cf6',
+    color: '#f97316',
     iconImg: null,
     items: ['LangChain', 'LlamaIndex', 'AutoGen', 'OpenAI API', 'RAG Systems', 'Vector DBs', 'Prompt Engineering'],
   },
@@ -210,7 +210,7 @@ export const education = [
     grade: 'In Progress',
     description:
       'Studying core computer science fundamentals, data structures, algorithms, and advanced topics in AI/ML. Actively involved in research projects, coding clubs, and technical communities.',
-    color: '#6366f1',
+    color: '#3b82f6',
     // Replace with: iconImg: '/media/education/nit-srinagar.png'
     iconImg: null,
   },

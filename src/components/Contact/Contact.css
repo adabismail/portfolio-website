@@ -58,8 +58,8 @@
 
 .contact-input:focus {
   border-color: var(--accent);
-  background: rgba(99, 102, 241, 0.06);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+  background: var(--accent-dim);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
 }
 
 .contact-textarea {
@@ -83,7 +83,7 @@
 
 .contact-submit--disabled:hover {
   transform: none;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+  box-shadow: none;
 }
 
 /* Spinner */

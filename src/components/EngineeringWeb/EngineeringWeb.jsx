@@ -40,7 +40,7 @@ export default function EngineeringWeb() {
             key={`ring-${r}`}
             cx={CX} cy={CY} r={r}
             fill="none"
-            stroke="rgba(139,92,246,0.35)" 
+            stroke="rgba(16,185,129,0.25)" 
             strokeWidth="1.5"
             strokeDasharray="4 6"
           />
@@ -54,7 +54,7 @@ export default function EngineeringWeb() {
               key={`spoke-${node.title}`}
               x1={CX} y1={CY}
               x2={maxPos.x} y2={maxPos.y}
-              stroke="rgba(139,92,246,0.25)"
+              stroke="rgba(16,185,129,0.15)"
               strokeWidth="1.5"
             />
           );
@@ -63,14 +63,14 @@ export default function EngineeringWeb() {
         {/* The colored proficiency polygon */}
         <polygon
           points={polygonPoints}
-          fill="rgba(139,92,246,0.25)"
-          stroke="rgba(139,92,246,0.9)"
+          fill="rgba(16,185,129,0.12)"
+          stroke="rgba(16,185,129,0.8)"
           strokeWidth="2"
           style={{ transition: 'all 0.5s ease-in-out' }}
         />
 
         {/* Center dots */}
-        <circle cx={CX} cy={CY} r="7" fill="#8b5cf6" className="radar-center-pulse" />
+        <circle cx={CX} cy={CY} r="7" fill="#10b981" className="radar-center-pulse" />
         <circle cx={CX} cy={CY} r="3" fill="#fff" />
       </svg>
 

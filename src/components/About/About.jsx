@@ -4,8 +4,8 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './About.css';
 
 const highlights = [
-  { icon: <FaCode />, label: 'Full Stack Development', color: '#6366f1' },
-  { icon: <FaBrain />, label: 'Agentic AI & RAG', color: '#8b5cf6' },
+  { icon: <FaCode />, label: 'Full Stack Development', color: '#3b82f6' },
+  { icon: <FaBrain />, label: 'Agentic AI & RAG', color: '#f97316' },
   { icon: <FaLayerGroup />, label: 'ML & Deep Learning', color: '#06b6d4' },
 ];
 

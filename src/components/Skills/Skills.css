@@ -52,9 +52,9 @@
   align-items: center;
   gap: 5px;
   padding: 5px 11px;
-  background: var(--badge-bg, rgba(99,102,241,0.1));
+  background: var(--badge-bg, rgba(16,185,129,0.08));
   color: var(--badge-color, var(--accent-light));
-  border: 1px solid var(--badge-border, rgba(99,102,241,0.2));
+  border: 1px solid var(--badge-border, rgba(16,185,129,0.15));
   border-radius: 100px;
   font-size: 0.78rem;
   font-weight: 600;
