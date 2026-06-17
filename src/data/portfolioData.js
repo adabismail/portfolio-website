@@ -83,8 +83,7 @@ export const projects = [
     demo: null,
     color: '#3b82f6',
     gradient: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)',
-    // Replace with: image: '/media/projects/memory-os.jpg'
-    image: null,
+    image: '/media/projects/airline.jpg',
   },
   {
     id: 2,
@@ -97,8 +96,8 @@ export const projects = [
     demo: null,
     color: '#06b6d4',
     gradient: 'linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%)',
-    // Replace with: image: '/media/projects/crm-lite.jpg'
-    image: null,
+    // Replace with: image: 
+    image: '/media/projects/review.jpg',
   },
 
     {
@@ -111,7 +110,7 @@ export const projects = [
     demo: null,
     color: '#ec4899',
     gradient: 'linear-gradient(135deg, #ec4899 0%, #f97316 100%)',
-    image: '/media/projects/project5.jpg',
+    image: '/media/projects/lru.jpg',
   },
 
   {
@@ -124,8 +123,8 @@ export const projects = [
     demo: null,
     color: '#10b981',
     gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-    // Replace with: image: '/media/projects/job-tracker.jpg'
-    image: null,
+    // Replace with: image: 
+    image: '/media/projects/riscv.jpg',
   },
   // ── Add more projects below this line ──────────────────────────
 
@@ -140,8 +139,7 @@ export const projects = [
     demo: null,
     color: '#f59e0b',
     gradient: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
-    // Replace with: image: '/media/projects/flightpulse.jpg'
-    image: null,
+    image: '/media/projects/flightpulse.jpg',
   },
 
     {
@@ -154,8 +152,8 @@ export const projects = [
     demo: null,
     color: '#10b981',
     gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-    // Replace with: image: '/media/projects/job-tracker.jpg'
-    image: null,
+    // Replace with: image: 
+    image: '/media/projects/hydra.jpg',
   },
 
 ];
@@ -210,7 +208,7 @@ export const education = [
     grade: 'In Progress',
     description:
       'Studying core computer science fundamentals, data structures, algorithms, and advanced topics in AI/ML. Actively involved in research projects, coding clubs, and technical communities.',
-    color: '#3b82f6',
+    color: '#10b981',
     // Replace with: iconImg: '/media/education/nit-srinagar.png'
     iconImg: null,
   },
@@ -224,7 +222,7 @@ export const education = [
     grade: 'Distinction',
     description:
       'Completed higher secondary education with a focus on Mathematics and Computer Science, building a strong foundation in analytical thinking and problem solving.',
-    color: '#06b6d4',
+    color: '#10b981',
     // Replace with: iconImg: '/media/education/school.png'
     iconImg: null,
   },
