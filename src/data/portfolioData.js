@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Adab Ismail',
   initials: 'AI',
-  role: 'Software Engineer & Agentic AI Developer',
+  role: 'Software & Agentic AI Developer',
   location: 'NIT Srinagar, Jammu & Kashmir, India',
   email: 'adabismail000@gmail.com',
   github: 'https://github.com/adabismail',
@@ -17,7 +17,6 @@ export const personalInfo = {
 };
 
 export const roles = [
-  'a Software Engineer',
   'an Agentic AI Developer',
   'a Full Stack Developer',
   'a Research Enthusiast',
@@ -38,7 +37,6 @@ export const experiences = [
       'Contributed to deep learning and computer vision research by developing, evaluating, and deploying machine learning models to support ongoing research initiatives.',
     ],
     tags: ['Python', 'Django', 'ReactJS', 'PosgreSQL', 'REST API Development', 'System Design', 'PyTorch', 'LLMs', 'Computer Vision'],
-    // Drop your logo at public/media/experience/gaash.png and set the path:
     iconImg: '/media/experience/gaash.jpg',
   },
   {
@@ -55,7 +53,6 @@ export const experiences = [
       'Outperformed the YOLOv5 baseline by +5.8% mAP and +4.2% F1-score through architecture optimization, training, and evaluation experiments.',
     ],
     tags: ['Deep Learning', 'Computer Vision', 'PyTorch', 'ViT', 'CNNs'],
-    // Drop your logo at  and set the path:
     iconImg: '/media/experience/iit.jpg',
   },
   {
@@ -63,7 +60,7 @@ export const experiences = [
     title: 'Frontend Development Intern',
     company: 'Traxevo Web Limited',
     shortCompany: 'Traxevo',
-    duration: '2023 — Present',
+    duration: 'May 2026 — Present',
     type: 'Internship',
     color: '#10b981',
     description: [
@@ -72,7 +69,6 @@ export const experiences = [
       'Collaborated in Agile development cycles while ensuring responsive design, cross-browser compatibility, and a consistent user experience.',
     ],
     tags: ['React.js', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Performance Optimization'],
-    // Drop your logo at  and set the path:
     iconImg: 'media/experience/traxevo.jpg',
   },
 ];
@@ -132,9 +128,8 @@ export const projects = [
     // Replace with: image: 
     image: '/media/projects/riscv.jpg',
   },
-  // ── Add more projects below this line ──────────────────────────
 
-    {
+  {
     id: 5,
     name: 'FlightPulse',
     tagline: 'Real-time flight tracking and analytics',
@@ -174,17 +169,12 @@ export const skills = {
   Backend: {
     color: '#06b6d4',
     iconImg: null,
-    items: ['Python', 'Django', 'Flask', 'FastAPI', 'REST APIs', 'GraphQL'],
+    items: ['Python', 'Django', 'Flask', 'FastAPI', 'REST APIs'],
   },
-  'Machine Learning': {
+  'ML/DL': {
     color: '#f59e0b',
     iconImg: null,
-    items: ['scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'XGBoost'],
-  },
-  'Deep Learning': {
-    color: '#ef4444',
-    iconImg: null,
-    items: ['PyTorch', 'TensorFlow', 'Keras', 'Hugging Face', 'Transformers', 'CNNs'],
+    items: ['scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'PyTorch', 'Hugging Face', 'Transformers', 'CNNs'],
   },
   'Agentic AI': {
     color: '#f97316',
@@ -215,7 +205,6 @@ export const education = [
     description:
       'Studying core computer science fundamentals, data structures, algorithms, and advanced topics in AI/ML. Actively involved in research projects, coding clubs, and technical communities.',
     color: '#10b981',
-    // Replace with: iconImg: 
     iconImg: '/media/education/nit.jpg',
   },
   {
@@ -229,7 +218,6 @@ export const education = [
     description:
       'Completed higher secondary education with a focus on Mathematics and Computer Science, building a strong foundation in analytical thinking and problem solving.',
     color: '#10b981',
-    // Replace with: iconImg: '/media/education/school.png'
     iconImg: null,
   },
 ];

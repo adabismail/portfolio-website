@@ -20,7 +20,7 @@ const Footer = () => {
               Adab Ismail
             </a>
             <p className="footer-tagline">
-              Software Engineer · Agentic AI Developer · NIT Srinagar
+              Full Stack · Agentic AI Developer · NIT Srinagar
             </p>
           </div>
 
