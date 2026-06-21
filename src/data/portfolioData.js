@@ -6,7 +6,7 @@ export const personalInfo = {
   email: 'adabismail000@gmail.com',
   github: 'https://github.com/adabismail',
   linkedin: 'https://www.linkedin.com/in/adab-ismail-a276a6228',
-  resume: 'https://drive.google.com/file/d/1ftMyF-r__0tcWj24-JQuSki4lNUr09G4/view?usp=drivesdk',
+  resume: 'https://drive.google.com/file/d/1PPkgTEUbtV18VGxWQXWtliyr0ylL6-Oh/view?usp=drivesdk',
   heroSummary:
     'Passionate technologist at NIT Srinagar, building intelligent systems at the intersection of agentic AI, full-stack engineering, and research.',
   aboutText: [
