@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaFilm } from 'react-icons/fa';
 import { personalInfo } from '../../data/portfolioData';
 import './Footer.css';
 
@@ -32,6 +32,9 @@ const Footer = () => {
             <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
+            <a href={personalInfo.letterboxd} target="_blank" rel="noopener noreferrer" className="footer-social" aria-label="Letterboxd">
+              <FaFilm />
+            </a>             
             <a href={`mailto:${personalInfo.email}`} className="footer-social" aria-label="Email">
               <FaEnvelope />
             </a>

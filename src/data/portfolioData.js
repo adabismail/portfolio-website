@@ -5,6 +5,7 @@ export const personalInfo = {
   location: 'NIT Srinagar, Jammu & Kashmir, India',
   email: 'adabismail000@gmail.com',
   github: 'https://github.com/adabismail',
+  letterboxd: 'https://boxd.it/gZfLX',  
   linkedin: 'https://www.linkedin.com/in/adab-ismail-a276a6228',
   resume: 'https://drive.google.com/file/d/1PPkgTEUbtV18VGxWQXWtliyr0ylL6-Oh/view?usp=drivesdk',
   heroSummary:
