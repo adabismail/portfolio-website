@@ -75,19 +75,21 @@ export const experiences = [
 ];
 
 export const projects = [
-  {
+
+      {
     id: 1,
-    name: 'Airline Fuel Optimization Agent',
-    tagline: 'AI-driven flight optimization',
-    description:
-      'An AI-powered airline fuel optimization agent built with AWS Strands SDK and MCP that analyzes flight plans and live weather conditions to recommend fuel-efficient route and altitude adjustments. The system combines weather-aware reasoning, fuel consumption modeling, and agent-driven tool orchestration to generate actionable optimization recommendations and structured flight reports.',
-    tech: ['Python', 'AWS Strands SDK', 'MCP', 'Ollama', 'Llama 3.1', 'Docker'],
-    github: 'https://github.com/adabismail/Airline_optimization_Agent',
+    name: 'Hydra - MapReduce',
+    tagline: 'Fault-Tolerant Distributed Processing Engine',
+    description: 'A distributed MapReduce framework built in Python that processes large text datasets using a Master-Worker architecture. The system supports parallel task execution, heartbeat-based worker monitoring, automatic task reassignment on failures, file-based shuffle and reduce operations, and a React dashboard for real-time cluster monitoring and job tracking.',
+    tech: ['Python', 'FastAPI', 'Uvicorn', 'Pydantic', 'React', 'Threading'],
+    github: 'https://github.com/adabismail/hydra',
     demo: null,
-    color: '#3b82f6',
-    gradient: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)',
-    image: '/media/projects/airline.jpg',
+    color: '#10b981',
+    gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+    // Replace with: image: 
+    image: '/media/projects/hydra.jpg',
   },
+
   {
     id: 2,
     name: 'ReviewFlow-AI',
@@ -145,18 +147,20 @@ export const projects = [
   },
 
     {
-    id: 4,
-    name: 'Hydra - MapReduce',
-    tagline: 'Fault-Tolerant Distributed Processing Engine',
-    description: 'A distributed MapReduce framework built in Python that processes large text datasets using a Master-Worker architecture. The system supports parallel task execution, heartbeat-based worker monitoring, automatic task reassignment on failures, file-based shuffle and reduce operations, and a React dashboard for real-time cluster monitoring and job tracking.',
-    tech: ['Python', 'FastAPI', 'Uvicorn', 'Pydantic', 'React', 'Threading'],
-    github: 'https://github.com/adabismail/hydra',
+    id: 6,
+    name: 'Airline Fuel Optimization Agent',
+    tagline: 'AI-driven flight optimization',
+    description:
+      'An AI-powered airline fuel optimization agent built with AWS Strands SDK and MCP that analyzes flight plans and live weather conditions to recommend fuel-efficient route and altitude adjustments. The system combines weather-aware reasoning, fuel consumption modeling, and agent-driven tool orchestration to generate actionable optimization recommendations and structured flight reports.',
+    tech: ['Python', 'AWS Strands SDK', 'MCP', 'Ollama', 'Llama 3.1', 'Docker'],
+    github: 'https://github.com/adabismail/Airline_optimization_Agent',
     demo: null,
-    color: '#10b981',
-    gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-    // Replace with: image: 
-    image: '/media/projects/hydra.jpg',
+    color: '#3b82f6',
+    gradient: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)',
+    image: '/media/projects/airline.jpg',
   },
+
+
 
 ];
 
