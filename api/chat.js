@@ -143,7 +143,15 @@ export default async function handler(req, res) {
     if (!geminiRes.ok) {
       const detail = await geminiRes.text();
       console.error('Gemini API error:', geminiRes.status, detail);
-      return res.status(502).json({ error: 'The assistant is having trouble right now. Please try again.' });
+      // TEMPORARY DEBUG: surface the real Gemini error so we can diagnose.
+      // Remove this and restore the friendly message once it works.
+      let reason = detail;
+      try {
+        reason = JSON.parse(detail)?.error?.message || detail;
+      } catch {
+        /* keep raw text */
+      }
+      return res.status(502).json({ error: `Gemini ${geminiRes.status}: ${String(reason).slice(0, 400)}` });
     }
 
     const data = await geminiRes.json();
