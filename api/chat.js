@@ -1,4 +1,4 @@
-const MODEL = 'gemini-2.0-flash';
+const MODEL = 'llama-3.3-70b-versatile';
 
 const KNOWLEDGE_BASE = `
 You are answering questions on behalf of Adab Ismail's personal portfolio website.
@@ -99,10 +99,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     return res.status(500).json({
-      error: 'The chatbot is not configured yet. Set GEMINI_API_KEY in your Vercel environment variables.',
+      error: 'The chatbot is not configured yet. Set GROQ_API_KEY in your Vercel environment variables.',
     });
   }
 
@@ -112,38 +112,39 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'No messages provided.' });
     }
 
-    const trimmed = messages.slice(-10);
-    const contents = trimmed
+    // Build an OpenAI-style message list: system prompt first, then the conversation.
+    const convo = messages
+      .slice(-10)
       .filter((m) => m && typeof m.content === 'string' && m.content.trim())
       .map((m) => ({
-        role: m.role === 'assistant' ? 'model' : 'user',
-        parts: [{ text: m.content.slice(0, 2000) }],
+        role: m.role === 'assistant' ? 'assistant' : 'user',
+        content: m.content.slice(0, 2000),
       }));
-    while (contents.length && contents[0].role === 'model') contents.shift();
-    if (contents.length === 0) {
+    if (convo.length === 0) {
       return res.status(400).json({ error: 'No valid user message.' });
     }
 
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`;
+    const chatMessages = [{ role: 'system', content: SYSTEM_PROMPT }, ...convo];
 
-    const geminiRes = await fetch(endpoint, {
+    const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
       body: JSON.stringify({
-        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-        contents,
-        generationConfig: { temperature: 0.4, maxOutputTokens: 500, topP: 0.9 },
-        safetySettings: [
-          { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_ONLY_HIGH' },
-          { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_ONLY_HIGH' },
-        ],
+        model: MODEL,
+        messages: chatMessages,
+        temperature: 0.4,
+        max_tokens: 500,
+        top_p: 0.9,
       }),
     });
 
-    if (!geminiRes.ok) {
-      const detail = await geminiRes.text();
-      console.error('Gemini API error:', geminiRes.status, detail);
-      // TEMPORARY DEBUG: surface the real Gemini error so we can diagnose.
+    if (!groqRes.ok) {
+      const detail = await groqRes.text();
+      console.error('Groq API error:', groqRes.status, detail);
+      // TEMPORARY DEBUG: surface the real provider error so we can diagnose.
       // Remove this and restore the friendly message once it works.
       let reason = detail;
       try {
@@ -151,12 +152,12 @@ export default async function handler(req, res) {
       } catch {
         /* keep raw text */
       }
-      return res.status(502).json({ error: `Gemini ${geminiRes.status}: ${String(reason).slice(0, 400)}` });
+      return res.status(502).json({ error: `Groq ${groqRes.status}: ${String(reason).slice(0, 400)}` });
     }
 
-    const data = await geminiRes.json();
+    const data = await groqRes.json();
     const reply =
-      data?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ||
+      data?.choices?.[0]?.message?.content ||
       "Sorry, I couldn't come up with an answer. Try rephrasing, or email Adab at adabismail000@gmail.com.";
 
     return res.status(200).json({ reply: reply.trim() });
