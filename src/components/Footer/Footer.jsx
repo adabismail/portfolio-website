@@ -45,7 +45,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="footer-copy">
-            © {year} Adab Ismail. All rights reserved.
+            <i>"When you stare into the abyss, the abyss stares back at you"</i>
           </p>
         </div>
       </div>

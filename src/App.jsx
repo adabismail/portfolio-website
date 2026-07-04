@@ -9,6 +9,7 @@ import Skills from './components/Skills/Skills';
 import Education from './components/Education/Education';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import ChatBot from './components/ChatBot/ChatBot';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -59,6 +60,9 @@ const App = () => {
       >
         ↑
       </button>
+
+      {/* RAG chatbot */}
+      <ChatBot />
     </ThemeProvider>
   );
 };

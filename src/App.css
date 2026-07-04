@@ -177,7 +177,7 @@ body {
 .go-top-btn {
   position: fixed;
   bottom: 32px;
-  right: 32px;
+  left: 32px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -211,7 +211,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .go-top-btn { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+  .go-top-btn { bottom: 20px; left: 20px; width: 40px; height: 40px; }
 }
 
 /* ============================================================
