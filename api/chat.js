@@ -144,15 +144,10 @@ export default async function handler(req, res) {
     if (!groqRes.ok) {
       const detail = await groqRes.text();
       console.error('Groq API error:', groqRes.status, detail);
-      // TEMPORARY DEBUG: surface the real provider error so we can diagnose.
-      // Remove this and restore the friendly message once it works.
-      let reason = detail;
-      try {
-        reason = JSON.parse(detail)?.error?.message || detail;
-      } catch {
-        /* keep raw text */
-      }
-      return res.status(502).json({ error: `Groq ${groqRes.status}: ${String(reason).slice(0, 400)}` });
+      return res.status(502).json({
+        error:
+          "I'm having a little trouble responding right now. Please try again in a moment — or reach Adab directly at adabismail000@gmail.com.",
+      });
     }
 
     const data = await groqRes.json();
@@ -163,6 +158,9 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply: reply.trim() });
   } catch (err) {
     console.error('Chat handler error:', err);
-    return res.status(500).json({ error: 'Something went wrong. Please try again.' });
+    return res.status(500).json({
+      error:
+        "Something went wrong on my end. Please try again shortly — or email Adab at adabismail000@gmail.com.",
+    });
   }
 }
