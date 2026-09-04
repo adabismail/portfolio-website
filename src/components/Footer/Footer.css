@@ -3,7 +3,7 @@
    ============================================================ */
 .footer {
   background: var(--bg-secondary);
-  border-top: 1px solid var(--border);
+  border-top: 3px solid var(--stroke);
   padding: 60px 0 32px;
 }
 
@@ -30,15 +30,11 @@
 }
 
 .footer-name {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--accent);
   text-decoration: none;
   letter-spacing: -0.02em;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   transition: opacity 0.2s;
 }
 
@@ -85,27 +81,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-medium);
-  color: var(--text-secondary);
+  border: var(--bw) solid var(--stroke);
+  background: var(--bg-card);
+  color: var(--text-primary);
   font-size: 1rem;
   text-decoration: none;
-  transition: var(--transition-fast);
+  box-shadow: 2px 2px 0 var(--shadow-color);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
 }
 
 .footer-social:hover {
-  color: var(--accent-light);
-  border-color: var(--border-accent);
-  background: var(--accent-dim);
-  transform: translateY(-2px);
+  color: #fff;
+  background: var(--accent);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard-sm);
 }
 
 /* Divider */
 .footer-divider {
-  height: 1px;
-  background: var(--border);
+  height: 2px;
+  background: var(--stroke);
   margin-bottom: 28px;
 }
 

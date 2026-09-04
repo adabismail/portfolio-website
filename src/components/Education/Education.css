@@ -19,6 +19,7 @@
   width: 58px;
   height: 58px;
   border-radius: var(--radius);
+  border: var(--bw) solid var(--stroke);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,17 +88,14 @@
 .edu-duration {
   display: inline-block;
   padding: 5px 12px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border);
-  border-radius: 100px;
+  background: var(--bg-card);
+  border: 2px solid var(--stroke);
+  border-radius: var(--radius-sm);
+  box-shadow: 2px 2px 0 var(--shadow-color);
   font-size: 0.78rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+  color: var(--text-primary);
+  font-weight: 800;
   white-space: nowrap;
-}
-
-[data-theme="light"] .edu-duration {
-  background: rgba(0,0,0,0.04);
 }
 
 .edu-grade {

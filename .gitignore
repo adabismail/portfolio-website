@@ -24,7 +24,7 @@ dist-ssr/
 *.sln
 *.sw?
 .claude/
-# Environment variables (Never commit secrets!)
+# Environment variables
 .env
 .env.local
 .env.development.local

@@ -41,20 +41,21 @@
   gap: 7px;
   padding: 9px 16px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-medium);
-  color: var(--text-secondary);
+  border: var(--bw) solid var(--stroke);
+  color: var(--text-primary);
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
-  transition: var(--transition-fast);
-  background: rgba(255,255,255,0.02);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
+  background: var(--bg-card);
+  box-shadow: 2px 2px 0 var(--shadow-color);
 }
 
 .about-social-btn:hover {
-  color: var(--accent-light);
-  border-color: var(--border-accent);
-  background: var(--accent-dim);
-  transform: translateY(-2px);
+  color: #fff;
+  background: var(--accent);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard-sm);
 }
 
 .about-resume-btn {
@@ -79,10 +80,19 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 16px 20px;
+  padding: 16px 18px;
+  background: var(--bg-card);
+  border: var(--bw) solid var(--stroke);
+  border-left: 8px solid var(--card-accent, var(--accent));
   border-radius: var(--radius);
-  border-left: 3px solid var(--card-accent, var(--accent));
+  box-shadow: var(--shadow-hard-sm);
   cursor: default;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.about-highlight-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard);
 }
 
 .about-highlight-icon {
@@ -99,8 +109,9 @@
 /* Quick facts */
 .about-quickfacts {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: var(--bw) solid var(--stroke);
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-hard);
   padding: 22px 24px;
   display: flex;
   flex-direction: column;
@@ -112,7 +123,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 11px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px dashed var(--stroke);
   gap: 12px;
 }
 
@@ -137,18 +148,19 @@
 }
 
 .about-fact-available {
-  color: #10b981;
+  color: var(--accent);
   display: flex;
   align-items: center;
   gap: 6px;
+  font-weight: 800;
 }
 
 .about-available-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #10b981;
-  box-shadow: 0 0 6px rgba(16,185,129,0.6);
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  border: 1.5px solid var(--stroke);
+  background: var(--accent);
   animation: pulse 2s ease-in-out infinite;
   flex-shrink: 0;
 }

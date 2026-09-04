@@ -13,7 +13,7 @@ const EducationCard = ({ edu, index }) => {
     >
       <div
         className="edu-icon-wrap"
-        style={{ background: `${edu.color}14`, border: `1px solid ${edu.color}28` }}
+        style={{ background: `${edu.color}22` }}
       >
         {edu.iconImg ? (
           <img

@@ -13,7 +13,7 @@ const ExperienceCard = ({ exp, index }) => {
     >
       {/* Timeline spine */}
       <div className="exp-spine">
-        <div className="exp-dot" style={{ background: exp.color, boxShadow: `0 0 12px ${exp.color}60` }} />
+        <div className="exp-dot" style={{ background: exp.color }} />
         <div className="exp-line" />
       </div>
 
@@ -21,7 +21,7 @@ const ExperienceCard = ({ exp, index }) => {
       <div className="exp-card card">
         {/* Header */}
         <div className="exp-card-header">
-          <div className="exp-icon" style={{ background: `${exp.color}18`, border: `1px solid ${exp.color}30`, color: exp.color }}>
+          <div className="exp-icon" style={{ background: `${exp.color}22`, color: exp.color }}>
             {exp.iconImg ? (
               <img
                 src={exp.iconImg}
