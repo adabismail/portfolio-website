@@ -61,7 +61,7 @@ export const experiences = [
     title: 'Frontend Development Intern',
     company: 'Traxevo Web Limited',
     shortCompany: 'Traxevo',
-    duration: 'May 2026 — Present',
+    duration: 'May 2026 — Juy 2026',
     type: 'Internship',
     color: '#10b981',
     description: [
@@ -81,7 +81,7 @@ export const projects = [
     name: 'Hydra - MapReduce',
     tagline: 'Fault-Tolerant Distributed Processing Engine',
     description: 'A distributed MapReduce framework built in Python that processes large text datasets using a Master-Worker architecture. The system supports parallel task execution, heartbeat-based worker monitoring, automatic task reassignment on failures, file-based shuffle and reduce operations, and a React dashboard for real-time cluster monitoring and job tracking.',
-    tech: ['Python', 'FastAPI', 'Uvicorn', 'Pydantic', 'React', 'Threading'],
+    tech: ['Python', 'FastAPI', 'REST', 'Multithreading', 'React', 'Distributed Systems'],
     github: 'https://github.com/adabismail/hydra',
     demo: null,
     color: '#10b981',
@@ -96,7 +96,7 @@ export const projects = [
     tagline: 'AI-Powered Review Automation',
     description:
       'AI Review Agent is a LangGraph-powered AI workflow that processes customer reviews, performs sentiment analysis, generates personalized responses, extracts key complaints from negative feedback, and automatically sends alert emails to businesses. The system uses conditional graph routing to dynamically choose execution paths based on sentiment, maintains audit logs for traceability, and leverages HuggingFace language models for cost-effective inference.',
-    tech: ['Python', 'LangGraph', 'LangChain', 'LCEL', 'SMPT', 'HuggingFace'],
+    tech: ['Python', 'LangGraph', 'LangChain', 'LCEL', 'FLAN-T5'],
     github: 'https://github.com/adabismail/ReviewFlow-AI',
     demo: null,
     color: '#06b6d4',
