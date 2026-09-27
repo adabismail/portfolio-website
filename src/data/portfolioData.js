@@ -184,7 +184,7 @@ export const skills = {
   'Agentic AI': {
     color: '#f97316',
     iconImg: null,
-    items: ['LangChain', 'LlamaIndex', 'AutoGen', 'OpenAI API', 'RAG Systems', 'Vector DBs', 'Prompt Engineering'],
+    items: ['LangChain', 'LlamaIndex', 'OpenAI API', 'RAG Systems', 'Vector DBs', 'Prompt Engineering'],
   },
   Databases: {
     color: '#10b981',
@@ -194,7 +194,7 @@ export const skills = {
   Tools: {
     color: '#64748b',
     iconImg: null,
-    items: ['Git', 'GitHub', 'Docker', 'VS Code', 'Postman', 'Linux', 'Figma', 'Jupyter'],
+    items: ['Git', 'GitHub', 'Docker', 'VS Code', 'Postman', 'Linux', 'Jupyter'],
   },
 };
 
