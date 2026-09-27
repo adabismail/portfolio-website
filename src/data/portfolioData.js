@@ -7,7 +7,7 @@ export const personalInfo = {
   github: 'https://github.com/adabismail',
   letterboxd: 'https://boxd.it/gZfLX',  
   linkedin: 'https://www.linkedin.com/in/adab-ismail-a276a6228',
-  resume: 'https://drive.google.com/file/d/1PPkgTEUbtV18VGxWQXWtliyr0ylL6-Oh/view?usp=drivesdk',
+  resume: 'https://drive.google.com/file/d/11-qSz4vkqXgaRMPwJCEmE3HEt1PDGDRT/view?usp=sharing',
   heroSummary:
     'Passionate technologist at NIT Srinagar, building intelligent systems at the intersection of agentic AI, full-stack engineering, and research.',
   aboutText: [
